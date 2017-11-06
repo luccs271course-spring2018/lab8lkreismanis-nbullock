@@ -18,6 +18,6 @@ public class Main {
     // 6. sort the ArrayList in descending order by count
     //    using Collections.sort and an instance of the provided comparator (after fixing the latter)
     // 7. print the (up to) ten most frequent words in the text
-
+    
   }
 }
