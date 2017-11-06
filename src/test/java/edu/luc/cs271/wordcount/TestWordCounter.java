@@ -14,12 +14,14 @@ public class TestWordCounter {
 
   @Before
   public void setUp() {
-    // TODO create the SUT instance
+    // DONE create the SUT instance
+    fixture = new Map<>();
   }
 
   @After
   public void tearDown() {
-    // TODO set the SUT instance to null
+    // DONE set the SUT instance to null
+    fixture = null;
   }
 
   @Test
@@ -36,7 +38,14 @@ public class TestWordCounter {
     // TODO run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-    fail();
+    final String value1 = "hello";
+    final String value2 = "hello";
+    fixture.offer(value1);
+    fixture.offer(value2);
+    final List<String> list = fixture.asList();
+    assertEquals(2, list.size());
+    assertEquals(Arrays.asList(value2, value2), list);
+    //fail();
 
   }
 }
