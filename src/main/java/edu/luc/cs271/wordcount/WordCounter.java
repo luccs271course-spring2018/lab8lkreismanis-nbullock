@@ -25,6 +25,7 @@ public class WordCounter {
     // HINT to do this without a conditional, use the getOrDefault method
     while(words.hasNext()){
       theMap.getOrDefault(words, getCount(words));
+      
   }
 
   /** Retrieve the frequency of a particular word. */
