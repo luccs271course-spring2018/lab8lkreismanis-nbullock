@@ -33,7 +33,8 @@ public class Main {
     Collections.sort(newList, new DescendingByCount());
 
     // 7. print the (up to) ten most frequent words in the text
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < array.length(); i++) {
+      
       System.out.println(newList(i));
     }
   }
