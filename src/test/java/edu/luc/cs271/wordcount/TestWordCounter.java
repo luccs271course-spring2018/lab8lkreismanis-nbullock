@@ -29,7 +29,6 @@ public class TestWordCounter {
 
     // TODO verify that the SUT initially returns an empty map
     fail();
-
   }
 
   @Test
@@ -45,7 +44,7 @@ public class TestWordCounter {
     final List<String> list = fixture.asList();
     assertEquals(2, list.size());
     assertEquals(Arrays.asList(value2, value2), list);
-    //fail();
+    // fail();
 
   }
 }
