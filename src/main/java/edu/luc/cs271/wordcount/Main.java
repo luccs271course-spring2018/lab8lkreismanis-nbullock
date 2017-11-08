@@ -12,18 +12,16 @@ public class Main {
     // TODO complete this main program
     // 1. create a WordCounter instance
     Map<String, Integer> newMap = new HashMap<String, Integer>();
-    WordCounter wc = new WordCounter(newMap);
+    WordCounter wc = new WordCounter(newMap); 
 
     // 2. use this to count the words in the input
-    while (input.hasNextLine()) {
-      wc(input, 0);
-    }
+    wc.countWords(input);
 
     // 3. determine the size of the resulting map
-    int sizeOfMap = wc.size();
+    int sizeOfMap = wc.getCounts().size();
 
     // 4. create an ArrayList of that size and
-    ArrayList<Map.Entry<String, Integer>> newList = new ArrayList<wc>(sizeOfMap);
+    ArrayList<Map.Entry<String, Integer>> newList = new ArrayList<Map.Entry<String, Integer>>(sizeOfMap);
 
     // 5. store the map's entries in it (these are of type Map.Entry<String, Integer>
 
@@ -33,9 +31,8 @@ public class Main {
     Collections.sort(newList, new DescendingByCount());
 
     // 7. print the (up to) ten most frequent words in the text
-    for (int i = 0; i < array.length(); i++) {
-      
-      System.out.println(newList(i));
+    for (int i = 0; i <= 10; i++) {
+      System.out.println(" " + newList.get(i));
     }
   }
 }

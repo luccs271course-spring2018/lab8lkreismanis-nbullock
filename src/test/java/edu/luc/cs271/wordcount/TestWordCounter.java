@@ -12,6 +12,8 @@ public class TestWordCounter {
 
   // TODO declare a reference to the SUT (system under test), i.e., WordCounter
 
+  private WordCounter wc = new WordCounter(); 
+  
   @Before
   public void setUp() {
     // DONE create the SUT instance
