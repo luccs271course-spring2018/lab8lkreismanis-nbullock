@@ -25,6 +25,10 @@ public class WordCounter {
     int number = 0;
     while (words.hasNext()) {
       String temp = words.next();
+      System.out.println("word:");  //break the iterator loop here
+      //once you break it, print map out
+      // 
+      System.out.println(temp);
       if (theMap.containsKey(temp)){
         number++;
         theMap.put(temp, number);
