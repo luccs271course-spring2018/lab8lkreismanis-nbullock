@@ -11,7 +11,7 @@ public class Main {
 
     // TODO complete this main program
     // 1. create a WordCounter instance
-    Map<String, Integer> newMap = new Map<String, Integer>();
+    Map<String, Integer> newMap = new HashMap<String, Integer>();
     WordCounter wc = new WordCounter(newMap);
 
     // 2. use this to count the words in the input
