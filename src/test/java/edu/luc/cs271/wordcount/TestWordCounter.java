@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.*;
 
 public class TestWordCounter {
 
@@ -12,12 +13,13 @@ public class TestWordCounter {
 
   // TODO declare a reference to the SUT (system under test), i.e., WordCounter
 
-  private WordCounter wc = new WordCounter(); 
+  private WordCounter fixture; 
   
   @Before
   public void setUp() {
     // DONE create the SUT instance
-    fixture = new Map<>();
+    Map<String, Integer> newMap = new HashMap<String, Integer>();
+    fixture = new WordCounter(newMap);
   }
 
   @After
@@ -30,7 +32,7 @@ public class TestWordCounter {
   public void testGetCountEmpty() {
 
     // TODO verify that the SUT initially returns an empty map
-    fail();
+    assertEquals(fixture.getCounts(), Collections.emptyMap());
   }
 
   @Test
@@ -39,14 +41,11 @@ public class TestWordCounter {
     // TODO run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-    final String value1 = "hello";
-    final String value2 = "hello";
-    fixture.offer(value1);
-    fixture.offer(value2);
-    final List<String> list = fixture.asList();
-    assertEquals(2, list.size());
-    assertEquals(Arrays.asList(value2, value2), list);
+    final ArrayList<String> list = new ArrayList<String>(Arrays.asList("hello", "world", "hello", "cat", "dog"));
+    fixture.countWords(list.iterator());
+    assertEquals(fixture.getCount("hello"), 2);
+    assertEquals(fixture.getCount("hi"), 0); 
+    assertEquals(fixture.getCount("world"), 1);
     // fail();
-
   }
 }
