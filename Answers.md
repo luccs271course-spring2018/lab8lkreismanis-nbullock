@@ -1,7 +1,7 @@
 #Answers
 ## By Larisa Kreismanis and Nathan Bullock
 1. Try using a TreeMap instead of a HashMap. Does this make any difference?
-There is ???? difference between using a TreeMap instead of a HashMap.
+There is a difference between using a TreeMap instead of a HashMap.  A TreeMap has keys that are sorted and in order.  A HashMap does not gurentee that keys will be sorted in order.
 
 2. What happens if you invoke countWords multiple times for different String iterators?
 When you invoke countWords multiple times for different String iterators, ???.
