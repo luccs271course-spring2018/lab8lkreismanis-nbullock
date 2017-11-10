@@ -41,7 +41,9 @@ public class TestWordCounter {
     // DONE run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-    Iterator<String> testMap = Arrays.asList("cat", "hello", "world", "hello", "man").iterator();
+    ArrayList<String> list = new ArrayList<>();
+    list.addAll(Arrays.asList("hello", "world", "hello", "man", "cat"));
+    Iterator<String> testMap = list.iterator();
     fixture.countWords(testMap);
     assertEquals(fixture.getCount("world"), 1);
     assertEquals(fixture.getCount("hello"), 2);
