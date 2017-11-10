@@ -9,9 +9,9 @@ import java.util.*;
 
 public class TestWordCounter {
 
-  // TODO complete this test class
+  // DONE complete this test class
 
-  // TODO declare a reference to the SUT (system under test), i.e., WordCounter
+  // DONE declare a reference to the SUT (system under test), i.e., WordCounter
 
   private WordCounter fixture; 
   
@@ -31,14 +31,14 @@ public class TestWordCounter {
   @Test
   public void testGetCountEmpty() {
 
-    // TODO verify that the SUT initially returns an empty map
+    // DONE verify that the SUT initially returns an empty map
     assertEquals(fixture.getCounts(), Collections.emptyMap());
   }
 
   @Test
   public void testGetCountNonEmpty() {
 
-    // TODO run the SUT on a specific String iterator with some repeated words,
+    // DONE run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
     final ArrayList<String> list = new ArrayList<String>(Arrays.asList("hello", "world", "hello", "cat", "dog"));
