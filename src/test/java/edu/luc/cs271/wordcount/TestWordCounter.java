@@ -2,10 +2,10 @@ package edu.luc.cs271.wordcount;
 
 import static org.junit.Assert.*;
 
+import java.util.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import java.util.*;
 
 public class TestWordCounter {
 
@@ -13,8 +13,8 @@ public class TestWordCounter {
 
   // DONE declare a reference to the SUT (system under test), i.e., WordCounter
 
-  private WordCounter fixture; 
-  
+  private WordCounter fixture;
+
   @Before
   public void setUp() {
     // DONE create the SUT instance
@@ -41,11 +41,12 @@ public class TestWordCounter {
     // DONE run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-    final ArrayList<String> list = new ArrayList<String>(Arrays.asList("hello", "world", "hello", "cat", "dog"));
-    fixture.countWords(list.iterator());
-    assertEquals(fixture.getCount("hello"), 2);
-    assertEquals(fixture.getCount("hi"), 0); 
+    Iterator<String> testMap = Arrays.asList("cat", "hello", "world", "hello", "man").iterator();
+    fixture.countWords(testMap);
     assertEquals(fixture.getCount("world"), 1);
+    assertEquals(fixture.getCount("hello"), 2);
+    assertEquals(fixture.getCount("cow"), 0);
+    assertEquals(fixture.getCount("dog"), 0);
     // fail();
   }
 }

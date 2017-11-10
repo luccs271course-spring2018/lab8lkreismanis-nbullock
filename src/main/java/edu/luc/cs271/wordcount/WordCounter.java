@@ -24,19 +24,12 @@ public class WordCounter {
     // HINT to do this without a conditional, use the getOrDefault method
     while (words.hasNext()) {
       String temp = words.next();
-     // System.out.println("word:");  //break the iterator loop here
-      //once you break it, print map out
-      // 
-      //System.out.println(temp);
-      if (theMap.containsKey(temp)){
-        int number = theMap.get(temp);
-        theMap.put(temp, number++);
-      } else {
-        theMap.put(temp, 1);
-      }
-      if(temp.equals(null)){
-        break;
-      }
+      // System.out.println("word:");  //break the iterator loop here
+      // once you break it, print map out
+      //
+      // System.out.println(temp);
+      int number = theMap.getOrDefault(temp, 0);
+      theMap.put(temp, number++);
     }
   }
 
@@ -45,7 +38,11 @@ public class WordCounter {
 
     // DONE
     int count = theMap.get(word);
-    return count;
+    if (theMap.containsKey(word)) {
+      return count;
+    } else {
+      return 0;
+    }
   }
 
   /** Retrieve the map representing all word frequencies. */
