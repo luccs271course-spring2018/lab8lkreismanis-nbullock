@@ -6,6 +6,8 @@ public class Main {
 
   public static void main(final String[] args) throws InterruptedException {
     
+    //File lesmiserables = new File("book.txt");
+    //BufferedReader reader = new BufferedReader(new FileReader(lesmiserables));
 
     // set up the scanner so that it separates words based on space and punctuation
     final Scanner input = new Scanner(System.in).useDelimiter("[^\\p{Alnum}]+");
